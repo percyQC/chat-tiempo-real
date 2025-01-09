@@ -23,7 +23,7 @@ io.on('connection', async (socket)=>{
     });
 
     //RECIBO EVENTO MENSAJE DESDE EL USUARIO X
-    socket.on('evt_usuarioMensaje', async (mensaje)=>{
+    socket.on('evt_usuarioMensaje', async(mensaje)=>{
         console.log('Se ha recibido el mensaje', mensaje);
         io.emit('evt_usuarioMensaje', {
             ...mensaje,
@@ -33,4 +33,4 @@ io.on('connection', async (socket)=>{
     });
 });
 
-module.exports = httpServer;
+module.exports = httpServer; 
